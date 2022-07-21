@@ -4,17 +4,13 @@
         19}; 并在控制台输出交换后的数组元素。*/
 public class Demo01 {
     public static void main(String[] args) {
-        int[] arr1 = {19,28,37,46,50};
-        for (int i = 0; i < arr1.length; i++) {
-            for (int i1 = arr1.length-1; i1 < arr1.length; i1--) {
-                if( i != i1 && i<i1){
-                    int temp = arr1[i];
-                    arr1[i] = arr1[i1];
-                    arr1[i1] =  temp;
-                    break;
-                }
-            }
+        int[] arr1 = {19, 28, 37, 46, 50};
+        for (int i = 0, j = arr1.length - 1; i <= j; i++, j--) {
+            int temp = arr1[i];
+            arr1[i] = arr1[j];
+            arr1[j] = temp;
         }
+
         for (int i : arr1) {
             System.out.println(i);
         }
