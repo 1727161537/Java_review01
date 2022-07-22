@@ -1,10 +1,11 @@
 import java.io.File;
+import java.io.IOException;
 
 public class Demo03 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //在D盘创建一个a.txt
-        File file = new File("D://aaa/a.txt");
-        boolean mkdir = file.mkdirs();
-        System.out.println(mkdir);
+        File file = new File("D://aaa/b.txt");
+        boolean newFile = file.createNewFile();
+        System.out.println(newFile);
     }
 }
