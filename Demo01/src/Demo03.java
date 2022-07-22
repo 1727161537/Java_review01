@@ -1,11 +1,14 @@
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+
 
 public class Demo03 {
     public static void main(String[] args) throws IOException {
-        //在D盘创建一个a.txt
-        File file = new File("D://aaa/b.txt");
-        boolean newFile = file.createNewFile();
-        System.out.println(newFile);
+        //文件输出流
+        FileOutputStream fileOutputStream = new FileOutputStream("D://aaa/b.txt");
+        fileOutputStream.write(80);
+
+        fileOutputStream.close();
     }
 }
