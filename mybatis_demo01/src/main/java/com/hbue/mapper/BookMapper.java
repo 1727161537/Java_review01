@@ -19,6 +19,6 @@ public class BookMapper {
         SqlSessionFactory build = new SqlSessionFactoryBuilder().build(inputStream);
         //获取sqlsession核心对象
         SqlSession sqlSession = build.openSession();
-        List<Book> list = sqlSession.selectList("com.hbue.mapper.findAll");`
+        List<Book> list = sqlSession.selectList("com.hbue.mapper.findAll");
     }
 }
